@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #190133, #9d9edd, #1d013b, #9d9edd, #1f013f);
+  background-size: cover; /* Ensures the background covers the entire viewport */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #070707;
+  box-sizing: border-box;
+}
+
+.container {
+  background: linear-gradient(135deg, #d7ee0d, #efeff1, #d7ee0d);
+  text-align: center;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px; /* Sets a max width to prevent it from being too wide */
+  min-width: 300px; /* Prevents it from being too narrow */
+}
+
+.title {
+  font-size: 2rem;
+  color: #0c0c0c;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.dice-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.player {
+  text-align: center;
+  margin: 10px; /* Adds spacing between players */
+}
+
+.dice {
+  font-weight: bold;
+  font-size: 2.5rem;
+  background: linear-gradient(to bottom, #26a69a, #fafbff, #26a69a);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  color: hsla(0, 0%, 2%, 0.897);
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #26a69a, #fafbff, #26a69a);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #d45d4c;
+}
+
+.result {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #080808;
+  font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .dice-container {
+    flex-direction: column; /* Stacks the dice vertically on smaller screens */
+    align-items: center;
+  }
+
+  .dice {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .dice {
+    font-size: 1.8rem;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .result {
+    font-size: 0.9rem;
+  }
+}
